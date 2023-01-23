@@ -17,12 +17,13 @@ class QuizManager: ObservableObject {
     init() {
         reset()
     }
+    
     func reset() {
         questions = questions.shuffled()
         index = 0
         score = 0
         progress = 0
-        playingGame = false
+        playingGame = true
         goToNextQuestion()
     }
     func goToNextQuestion() {
